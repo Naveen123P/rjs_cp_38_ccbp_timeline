@@ -7,13 +7,19 @@ import './index.css'
 
 const TimeLineView = props => {
   const {timelineItemsList} = props
+  const itemsTitle = timelineItemsList.map(eachObject => ({
+    title: eachObject.title,
+  }))
+  console.log(itemsTitle)
+  // {/* const courseObject = {title: eachItem.title, cardTitle: eachItem.courseTitle, cardSubTitle: eachItem.duration, cardDetailedText:[eachItem.description, eachItem.tagsList]} */}
 
   return (
     <div className="bg-container">
-      <p className="journey">MY JOURNEY OF</p>
-      <h1 className="ccbp">CCBP 4.0</h1>
+      <h1 className="journey">
+        MY JOURNEY OF <span className="ccbp">CCBP 4.0</span>
+      </h1>
       <div className="chrono-container">
-        <Chrono mode="VERTICAL_ALTERNATING">
+        <Chrono mode="VERTICAL_ALTERNATING" items={itemsTitle}>
           {timelineItemsList.map(eachItem =>
             eachItem.categoryId === 'COURSE' ? (
               <CourseTimelineCard key={eachItem.id} items={eachItem} />
