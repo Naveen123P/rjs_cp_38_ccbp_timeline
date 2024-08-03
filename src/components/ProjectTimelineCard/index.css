@@ -1,0 +1,45 @@
+/* Write your CSS here */
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+.course-container {
+  padding: 10px 15px 10xp 15px;
+}
+.img-con {
+  height: 120px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.image {
+  height: 100%;
+  width: 100%;
+}
+.calender-con {
+  display: flex;
+  align-items: center;
+}
+.duration {
+  color: #1e293b;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+.description {
+  color: #1e293b;
+}
+.projectUrl {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .img-con {
+    height: 200px;
+  }
+  .title-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
